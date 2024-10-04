@@ -1,0 +1,47 @@
+html {
+    background: #000;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: grid;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 20% auto;
+    grid-template-rows: auto;
+}
+
+div.berechnung{
+    display: inline;
+    text-align: right;
+}
+
+input:invalid{
+    accent-color: #f00;
+}
+input:valid{
+    accent-color: #0f0;
+}
+
+canvas{
+    background: #333;
+    display: block;
+}
+
+.code_block{
+    background: #222;
+    text-align: left;
+    margin: 8px;
+    padding: 4px;
+    min-height: 5em;
+    height: auto;
+    width: 90%;
+    border: 2px solid #00aaff;
+    border-radius: 8px;
+}

@@ -1,19 +1,54 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="utf-8">
-        <link rel="icon" href="/Katze.png">
-        <meta name="theme-color" content="#ACFF24">
-        <!-- https://ogp.me -->
-        <meta property="og:title" content="Title" />
-        <meta property="og:site_name" content="Site Name">
-        <meta property="og:image" content="/Katze.png" />
-        <meta property="og:description" content="Description" />
-        <meta property="og:type" content="article" />
-        <!-- title -->
-        <title>Exblosis</title>
-    </head>
-	<body>
-	<h1>ᓚᘏᗢ</h1>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Blume.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- https://ogp.me -->
+    <meta property="og:title" content="CTOS">
+    <meta property="og:site_name" content="Rechner">
+    <meta property="og:image" content="Blume.png">
+    <meta property="og:description" content="Berechnen von Formen">
+    <meta property="og:type" content="article">
+    <!-- Title -->
+    <title>Rechner</title>
+</head>
+<body>
+    <div class="grid berechnung">
+        <label for="mp_x">Mittel Punkt X:</label>
+        <input name="mp_x" type="number" id="mp_x" placeholder="X" value="0" step="1">
+        <br>
+        <label for="mp_y">Mittel Punkt Y:</label>
+        <input name="mp_y" type="number" id="mp_y" placeholder="Y" value="0" step="1">
+        <br>
+        <label for="anzahl">Anzahl:</label>
+        <input name="anzahl" type="number" id="anzahl" placeholder="Anzahl" value="6" step="1" min="3">
+        <br>
+        <label for="kante">Kante:</label>
+        <input name="kante" type="number" id="kante" placeholder="Kante" value="100" step="0.1">
+        <br>
+        <label for="breite">Breite:</label>
+        <input name="breite" type="number" id="breite" placeholder="Breite" value="0" step="0.1">
+        <br>
+        <input type="button" id="berechnen" value="Berechnen">
+        <br>
+        <label for="winkel">Winkel:</label>
+        <input name="winkel" type="text" id="winkel" placeholder="Winkel" readonly>
+        <br>
+        <label for="h">Radius:</label>
+        <input name="h" type="text" id="h" placeholder="Radius h" readonly>
+        <br>
+        <label for="radius">Radius - Breite:</label>
+        <input name="radius" type="text" id="radius" placeholder="Radius" readonly>
+
+        <pre class="code_block" id="json"></pre>
+    </div>
+    <div class="grid drawing">
+        <canvas id="skizze" height="600" width="600">
+
+        </canvas>
+    </div>
+    <script src="main.js"></script>
+</body>
 </html>
